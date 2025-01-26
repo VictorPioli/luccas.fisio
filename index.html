@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linktree - Fisioterapia</title>
+  <!-- Link para o Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .logo {
+      margin: 0;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.2); /* Aplica o zoom (20% maior) */
+    }
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2170b2;
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 10px 0;
+      transition: background 0.3s;
+      font-size: 16px;
+    }
+    .links a:hover {
+      opacity: 0.6;
+    }
+    .links a i {
+      margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    }
+    .location-toggle {
+      background: #2170b2;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .location-info {
+      display: none;
+      background-color: #e1f0ff;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .location-info a {
+      text-decoration: none;
+      color: #2170b2;
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    function toggleLocations() {
+      var locationInfo = document.getElementById('location-info');
+      // Alterna entre mostrar e esconder
+      if (locationInfo.style.display === 'none' || locationInfo.style.display === '') {
+        locationInfo.style.display = 'block';
+      } else {
+        locationInfo.style.display = 'none';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="Logo Fisioterapia" class="logo">
+    <h1>Bem-vindo</h1>
+    <p>Acesse nossos links abaixo:</p>
+    <div class="links">
+      <a href="https://www.instagram.com/luccas.physio/" target="_blank">
+        <i class="fab fa-instagram"></i> Meu Instagram
+      </a>
+      <a href="https://wa.me/5515997066146?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank">
+        <i class="fab fa-whatsapp"></i> Fale conosco no WhatsApp
+      </a>
+    </div>
+
+    <!-- Texto clicável para mostrar os endereços -->
+    <button class="location-toggle" onclick="toggleLocations()"><i class="fas fa-map-marker-alt"></i> Veja nossos endereços</button>
+
+    <!-- Endereços ocultos inicialmente -->
+    <div id="location-info" class="location-info">
+      <!-- Links do Google Maps com rota -->
+      <p><a href="https://maps.app.goo.gl/WiXRG4mNnd1L952t5" target="_blank">Ibiúna-SP: Rua Zico Soares, 290 - Centro</a></p>
+      <p><a href="https://maps.app.goo.gl/6eMAxE7YkgEYE7zH9" target="_blank">Sorocaba-SP: Rua Laura Maiello Kook, 1711 - Jardim Novo Mundo</a></p>
+    </div>
+  </div>
+</body>
+</html>
